@@ -51,6 +51,9 @@
 #ifdef HAVE_TERMIOS_H
 #  include <termios.h>
 #endif
+#if defined(HAVE_PTHREAD_H) && defined(LLVM_ENABLE_THREADS)
+#  include <pthread.h>
+#endif
 
 //===----------------------------------------------------------------------===//
 //=== WARNING: Implementation here must contain only generic UNIX code that
